@@ -4,7 +4,10 @@ from datetime import datetime
 from picamera2 import Picamera2, Preview
 from google.cloud import vision
 
+# 建立 Vision API 客戶端
+client = vision.ImageAnnotatorClient()
 
+# Camera
 picam2 = Picamera2()
 camera_config = picam2.create_preview_configuration()
 picam2.configure(camera_config)
